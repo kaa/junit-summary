@@ -1,13 +1,9 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'JUnit summary'
+description: 'Render a job summary from a JUnit test result file'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  path:
+    description: Path to junit.xml
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
 runs:
   using: 'node16'
   main: 'dist/index.js'
